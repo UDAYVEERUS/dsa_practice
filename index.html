@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Array traversing</title>
+    <title>Array Insert</title>
 </head>
     <script>
         let array = [1,4,3,2,9,6,4,8,2]
-        // for(var i=0;i<array.length;i++){
+        // this is insert the value at the end of array
+        array.push(4,88)
+        // this is adding the value at the starting the array. 
+        array.unshift(0,66)
+        document.write(array)
 
-        //     document.write(`${array[i]}<br/>`)
+        // function getElement(){
+        //     var el = document.getElementById("elem").value
+        //     if(el<array.length){
+        //         alert(array[el])
+        //     }else{
+        //         alert("enter valid input")
+        //     }
         // }
-
-        function getElement(){
-            var el = document.getElementById("elem").value
-            if(el<array.length){
-                alert(array[el])
-            }else{
-                alert("enter valid input")
-            }
-        }
     </script>   
 <body>
     <input type="text" id="elem" />
