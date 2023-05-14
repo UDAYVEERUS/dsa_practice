@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>array inserting</title>
+</head>
+<script>
+let data = [4,3,7,8,92,75,74,34,65];
+    let newEl =23;
+    let position = 5
+    for(var i=data.length-1; i>=0;i--){
+        // console.warn(data[i])
+        if(i>=position){
+            data[i+1]=data[i]
+            if(i==position){
+                data[i] = newEl
+                document.write(`After new element ${newEl} insert in array ` +data)
+            }
+        }
+    }
+    console.log(data)
+    
+</script>
+<body>
+    
+</body>
+</html>
