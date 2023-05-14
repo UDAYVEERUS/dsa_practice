@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>array inserting</title>
 </head>
 <script>
-// let data = [4,3,7,8,92,75,74,34,65];
-//     let newEl =23;
-//     let position = 5
-//     for(var i=data.length-1; i>=0;i--){
-//         // console.warn(data[i])
-//         if(i>=position){
-//             data[i+1]=data[i]
-//             if(i==position){
-//                 data[i] = newEl
-//                 document.write(`After new element ${newEl} insert in array ` +data)
-//             }
-//         }
-//     }
-//     console.log(data)
-function insertEl(){
-    var data  = [3,5,6,8,9,2,4,65,34,67,32]
-    var position = document.getElementById("position").value
-    var newEl = document.getElementById("newElement").value
-    for(var i=data.length-1; i>=0;i--){
-        // console.warn(data[i])
-        if(i>=position){
-            data[i+1]=data[i]
-            if(i==position){
-                data[i] = newEl
-                // document.write(`After new element ${newEl} insert in array ` +data)
-            }
-        }
-    }
-    console.log(data)
-}
-    
+    // let data = [4,3,7,8,92,75,74,34,65];
+    //     let newEl =23;
+    //     let position = 5
+    //     for(var i=data.length-1; i>=0;i--){
+    //         // console.warn(data[i])
+    //         if(i>=position){
+    //             data[i+1]=data[i]
+    //             if(i==position){
+    //                 data[i] = newEl
+    //                 document.write(`After new element ${newEl} insert in array ` +data)
+    //             }
+    //         }
+    //     }
+    //     console.log(data)
+    // function insertEl(){
+    //     var data  = [3,5,6,8,9,2,4,65,34,67,32]
+    //     var position = document.getElementById("position").value
+    //     var newEl = document.getElementById("newElement").value
+    //     for(var i=data.length-1; i>=0;i--){
+    //         // console.warn(data[i])
+    //         if(i>=position){
+    //             data[i+1]=data[i]
+    //             if(i==position){
+    //                 data[i] = newEl
+    //                 // document.write(`After new element ${newEl} insert in array ` +data)
+    //             }
+    //         }
+    //     }
+    //     console.log(data)
+    // }
+    // using SPLICE METHOD INSERT THE ELEMNETS
+        let data = [4, 3, 7, 8, 92, 75, 74, 34, 65]
+        // data.splice(4, 0, 12)
+        data.splice(1,0,97)
+        console.log(data)
 </script>
+
 <body>
-    <input type="text" id="position" placeholder="Enter position" >
+    <!-- <input type="text" id="position" placeholder="Enter position" >
     <input type="text" id="newElement" placeholder="Enter Element" >
 
-    <button onclick="insertEl()">insert element</button>
+    <button onclick="insertEl()">insert element</button> -->
 </body>
+
 </html>
