@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array traversing</title>
+</head>
+    <script>
+        let array = [1,4,3,2,9,6,4,8,2]
+        // for(var i=0;i<array.length;i++){
+
+        //     document.write(`${array[i]}<br/>`)
+        // }
+
+        function getElement(){
+            var el = document.getElementById("elem").value
+            if(el<array.length){
+                alert(array[el])
+            }else{
+                alert("enter valid input")
+            }
+        }
+    </script>   
+<body>
+    <input type="text" id="elem" />
+    <button onclick="getElement()">get element</button>
+</body>
+</html>
