@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array Deletion</title>
+</head>
+<script>
+    var arr = [23,43,21,45,67,89,54,32]
+    var position = 5
+    var n = arr.length
+    for(var i=position;i<n;i++){
+        console.log(arr[i])
+        arr[i] = arr[i+1]
+    }
+    arr.length = arr.length-1
+    document.write(arr)
+</script>
+<body>
+    
+</body>
+</html>
