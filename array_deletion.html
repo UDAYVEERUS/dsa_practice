@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Array Deletion</title>
 </head>
 <script>
-    var arr = [23,43,21,45,67,89,54,32]
-    var position = 5
-    var n = arr.length
-    for(var i=position;i<n;i++){
-        console.log(arr[i])
-        arr[i] = arr[i+1]
+    // var arr = [23,43,21,45,67,89,54,32]
+    // var position = 5
+    // var n = arr.length
+    // for(var i=position;i<n;i++){
+    //     console.log(arr[i])
+    //     arr[i] = arr[i+1]
+    // }
+    // arr.length = arr.length-1
+    // document.write(arr)
+
+    function deleteEl() {
+        var arr = [23, 43, 21, 45, 67, 89, 54, 32]
+        var position = document.getElementById("position").value;
+        position=parseInt(position)
+        // var n = arr.length
+        for (var i = position; i <arr.length-1; i++) {
+            console.log(arr[i])
+            arr[i] = arr[i + 1]
+        }
+        arr.length = arr.length - 1
+        document.write(arr)
     }
-    arr.length = arr.length-1
-    document.write(arr)
+
 </script>
+
 <body>
-    
+    <input type="text" id="position" placeholder="Enter position" />
+    <button onclick="deleteEl()">Delete Element</button>
 </body>
+
 </html>
