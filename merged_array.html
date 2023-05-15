@@ -9,11 +9,10 @@
     let arr2 = [8,3,6,1,5,4,2,3]
     let arr3 = []
     for(var i=0;i<arr1.length;i++){
-        arr3.push(arr1[i])
+       arr3[i] = arr1[i]
     }
-    // console.log(arr3)
     for(var j=0;j<arr2.length;j++){
-        arr3.push(arr2[j])
+        arr3[j+arr1.length] = arr2[j]
     }
     document.write(arr3)
     console.log(arr3)
@@ -23,6 +22,6 @@
     // console.log(arr3)
 </script>
 <body>
-    <h1>Merged two Array</h1>
+    <h1>Merged two Array using for loop</h1>
 </body>
 </html>
