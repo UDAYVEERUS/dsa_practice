@@ -37,11 +37,23 @@
     // document.write("Descending Order sort Array" + array)
     // console.log(array)
 
-    // sort the arr using sort method
+    // sort the arr in Descending order using sort method
     let arr1  = [5,7,8,9,3,5,6,2,12,34,56,32,43,12]
-    arr1.sort((a,b) => (a - b))
+    arr1.sort(function(a,b){
+        return b-a
+    })
+    document.write("Array sorting in Descending order "+arr1)
+    console.log("Ascending order "+arr1)
+    // arr1.sort((a,b) => (a - b))
 
-    console.log(arr1)
+    // console.log(arr1)
+    // sort array using sort method in ascending order
+    let arr2  = [5,7,8,9,3,5,6,2,12,34,56,32,22,54,16,73]
+    arr2.sort(function(a,b){
+        return a + b
+    })
+    document.write("Array sorting in Ascending order "+arr2)
+    console.log("Descending order "+arr2)
 
     
 
