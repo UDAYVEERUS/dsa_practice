@@ -42,11 +42,21 @@
                 }
             }
         }
-        document.write(`Descending order ${array2}`)
+        document.write(`Descending order ${array2} <br/>`)
+        // recursion
+        function factorial(x){
+            if(x<=1){
+                return 1
+            }
+            return x*factorial(x-1)
+        }
+        let num = 6
+        console.log(factorial(num))
+        document.write(`Factorial num of ${num} is `+factorial(num))
     </script>   
 <body>
     <!-- <input type="text" id="elem" />
     <button onclick="getElement()">get element</button> -->
-    <h1>Sorting Array in Ascending order or Descending order</h1>
+    <h1>Sorting Array in Ascending order or Descending order & Factorial number</h1>
 </body>
 </html>
