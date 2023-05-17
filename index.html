@@ -29,8 +29,8 @@
                 }
             }
         }
-        document.write(`Ascending order ${array1}  <br/>`)
-        console.log(array1)
+        // document.write(`Ascending order ${array1}  <br/>`)
+        // console.log(array1)
 
         let array2 = [1,5,3,2,7,4,9]
         for(var i=0;i<array2.length;i++){
@@ -42,7 +42,7 @@
                 }
             }
         }
-        document.write(`Descending order ${array2} <br/>`)
+        // document.write(`Descending order ${array2} <br/>`)
         // recursion
         function factorial(x){
             if(x<=1){
@@ -51,12 +51,27 @@
             return x*factorial(x-1)
         }
         let num = 6
-        console.log(factorial(num))
-        document.write(`Factorial num of ${num} is `+factorial(num))
+        // console.log(factorial(num))
+        // document.write(`Factorial num of ${num} is `+factorial(num))
+
+
+        //MERGING ARRAY
+        let arr1 = [4,2,7,4,3,1,9]
+        let arr2 = [88,35,23,43,12,65,43]
+        let arr3 = []
+       for(var i=0; i < arr1.length; i++){
+        arr3[i] = arr1[i]
+       }
+       for(var j = 0 ; j < arr2.length ; j++){
+        arr3[j+arr1.length] = arr2[j]
+       }
+
+        console.log("value of arr3 is "+arr3)
+        // console.log([...arr1,...arr2])
     </script>   
 <body>
     <!-- <input type="text" id="elem" />
     <button onclick="getElement()">get element</button> -->
-    <h1>Sorting Array in Ascending order or Descending order & Factorial number</h1>
+    <!-- <h1>Sorting Array in Ascending order or Descending order & Factorial number</h1> -->
 </body>
 </html>
