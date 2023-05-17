@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array Sorting</title>
+</head>
+<script>
+    // Sorted srray in Assending Order
+    let data = [5,2,8,4,1,9,43,25,43,78,82,22,16,14]
+    for(var i=0;i<data.length;i++){
+        for(var j=0;j<data.length;j++){
+            if(data[j] > data[j+1]){
+                let temp = data[j]
+                data[j] = data[j+1]
+                data[j+1] = temp
+            }
+        }
+    }
+    console.log(data)
+    document.write("Assending order sort Array "+data)
+
+</script>
+<body>
+    
+</body>
+</html>
