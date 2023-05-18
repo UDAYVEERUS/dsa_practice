@@ -38,9 +38,14 @@
 
     // Recursive array with reverse
     let arr = ["apple", "banana", "orange", "mango", "grape", "kiwi", "pineapple", "lemon", "grapefruit", "strawberry", "blueberry", "raspberry", "mango", "grape"]
-    let reverse = arr.reverse()
+    let reverse = []
+    // let reverse = arr.reverse()
+    // console.log(reverse)
+    // document.write(`<h3 class="array">Reverse Array using reverse method</h3> <h4 class="reverse_result">${reverse}</h4>`)
+    for(var i=arr.length-1;i>=0;i--){
+        reverse.push(arr[i])
+    }
     console.log(reverse)
-    document.write(`<h3 class="array">Reverse Array using reverse method</h3> <h4 class="reverse_result">${reverse}</h4>`)
 </script>
 
 <body>
