@@ -5,10 +5,11 @@
     <title>Indirect Recursion</title>
 </head>
 <style>
-    .array{
+    .array {
         color: blue;
     }
-    .reverse_result{
+
+    .reverse_result {
         color: green;
     }
 </style>
@@ -20,7 +21,7 @@
         // console.log(x)
         if (x > 0) {
             document.write(`I have+ ${x}+ RS, ${totalapple} <br/>`)
-            console.log("I have", x, "RS", totalapple )
+            console.log("I have", x, "RS", totalapple)
             buyMore(x)
         }
         else {
@@ -37,15 +38,31 @@
     buyApple(money)
 
     // Recursive array with reverse
-    let arr = ["apple", "banana", "orange", "mango", "grape", "kiwi", "pineapple", "lemon", "grapefruit", "strawberry", "blueberry", "raspberry", "mango", "grape"]
-    let reverse = []
+    // let arr = ["apple", "banana", "orange", "mango", "grape", "kiwi", "pineapple", "lemon", "grapefruit", "strawberry", "blueberry", "raspberry", "mango", "grape"]
+    // let reverse = []
     // let reverse = arr.reverse()
     // console.log(reverse)
     // document.write(`<h3 class="array">Reverse Array using reverse method</h3> <h4 class="reverse_result">${reverse}</h4>`)
-    for(var i=arr.length-1;i>=0;i--){
-        reverse.push(arr[i])
+    // for (var i = arr.length - 1; i >= 0; i--) {
+    //     reverse.push(arr[i])
+    // }
+    // console.log(reverse)
+
+    let data = [89, 74, 27, 18, 17, 62, 35,76,43,99]
+    let temp;
+    function customReverse(data, start, end) {
+        if (start <= end) {
+            console.log(data)
+            temp = data[start]
+            data[start] = data[end]
+            data[end] = temp
+
+            customReverse(data,start+1, end-1)
+
+        }
+
     }
-    console.log(reverse)
+    customReverse(data, 0, data.length - 1)
 </script>
 
 <body>
