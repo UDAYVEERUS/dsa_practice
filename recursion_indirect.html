@@ -4,6 +4,14 @@
 <head>
     <title>Indirect Recursion</title>
 </head>
+<style>
+    .array{
+        color: blue;
+    }
+    .reverse_result{
+        color: green;
+    }
+</style>
 <script>
     // Recursive Indirect Function
     let money = 100
@@ -16,8 +24,8 @@
             buyMore(x)
         }
         else {
-            document.write("you don't have enough money to buy this", totalapple)
-            console.log("you don't have enough money to buy this", totalapple)
+            document.write(`you don't have enough money to buy this+${totalapple} <br/>`)
+            console.log(`you don't have enough money to buy this + ${totalapple}`)
         }
     }
 
@@ -28,10 +36,15 @@
     }
     buyApple(money)
 
+    // Recursive array with reverse
+    let arr = ["apple", "banana", "orange", "mango", "grape", "kiwi", "pineapple", "lemon", "grapefruit", "strawberry", "blueberry", "raspberry", "mango", "grape"]
+    let reverse = arr.reverse()
+    console.log(reverse)
+    document.write(`<h3 class="array">Reverse Array using reverse method</h3> <h4 class="reverse_result">${reverse}</h4>`)
 </script>
 
 <body>
-    <h1>Indirect Recursive function</h1>
+    <h1>Indirect Recursive function && Recursive array with reverse</h1>
 </body>
 
 </html>
