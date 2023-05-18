@@ -69,6 +69,19 @@
         console.log("value of arr3 is "+arr3)
         document.write("value of merged array is " + arr3)
         // console.log([...arr1,...arr2])
+
+       // find the second largest number in array
+       let number = [23,43,54,12,76,22,99,76,85,34,56,55]
+       number.sort((a,b) => (a-b))
+       console.log("sorted array ina Ascending order is" + number)
+       let second_largest = 0
+       for(var i=0;i<number.length;i++){
+        second_largest = number[number.length-2]
+    }
+    console.log("The second largest number is : "+second_largest)
+
+
+
     </script>   
 <body>
     <!-- <input type="text" id="elem" />
