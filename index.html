@@ -3,6 +3,11 @@
 <head>
     <title>Array Insert</title>
 </head>
+<style>
+    .pattern{
+        color: blue;
+    }
+</style>
     <script>
         let array = [1,4,3,2,9,6,4,8,2]
         // this is insert the value at the end of array
@@ -67,7 +72,7 @@
        }
 
         console.log("value of arr3 is "+arr3)
-        document.write("value of merged array is " + arr3)
+        // document.write("value of merged array is " + arr3)
         // console.log([...arr1,...arr2])
 
        // find the second largest number in array
@@ -86,6 +91,18 @@
         sum=sum+number1[i]
     }
     console.log("The total sum of the array is : " + sum)
+
+
+    // print the start pattern
+    let n =5
+    let string= ""
+    for(var i=0;i<n;i++){
+        for(var j=0;j<=i;j++){
+            string+="*"
+        }
+        string+="<br/>"
+    }
+    document.write(`<h3 class="pattern">Print start pattern <br/> ${string}</h3>`)
     </script>   
 <body>
     <!-- <input type="text" id="elem" />
