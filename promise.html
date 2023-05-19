@@ -29,6 +29,20 @@
     .then(function successValue1(){
          console.log("You can call multiple functions this way")
     })
+
+    //return a promise
+    let counting  = new Promise(function(resolve , reject){
+        reject("promise rejected")
+    })
+    // executes when promise is resolved successfully
+    counting.then(function(result){
+        console.log(result)
+    })
+    //Execute when is an error
+    .catch(function errorValue(result){
+        console.log(result)
+    })
+
 </script>
 
 <body>
