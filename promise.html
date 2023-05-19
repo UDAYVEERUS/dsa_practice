@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Promises</title>
+</head>
+<script>
+    let x = 10;
+
+    const countValue = new Promise(function (resolve, reject) {
+        if (x == 10) {
+            resolve("promise fullfilled")
+        } else {
+            reject("promise rejected")
+        }
+    })
+    console.log(countValue)
+</script>
+
+<body>
+
+</body>
+
+</html>
