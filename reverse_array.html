@@ -8,13 +8,20 @@
     <script>
         const arr = ["udayveer", "gungun",1,4,6,8,9,3,2,1]
         const reverse = arr.reverse()
-        document.write(reverse)
+        // document.write(reverse)
         console.log(reverse)
         
         const arr1 = [44,22,66,44,33,74,32]
-        const reverse_array = arr1.reverse()
-        document.write(reverse_array)
-        console.log(reverse_array)
+        var sum = 0
+        // const reverse_array = arr1.reverse()
+        // document.write(reverse_array)
+        // console.log(reverse_array)
+
+        for(var i=0;i<arr1.length;i++){
+            sum=sum+arr1[i]
+        }
+        document.write(sum)
+
 
     </script>
 </body>
