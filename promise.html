@@ -8,14 +8,27 @@
 <script>
     let x = 10;
 
-    const countValue = new Promise(function (resolve, reject) {
+    const count = new Promise(function (resolve, reject) {
         if (x == 10) {
             resolve("promise fullfilled")
         } else {
             reject("promise rejected")
         }
     })
-    console.log(countValue)
+    console.log(count)
+
+    // return a promise
+    let countValue = new Promise(function(resolve, reject){
+        resolve("promise fulfilled")
+    })
+    //Execute when promise fulfilled successfully
+    countValue
+    .then(function successValue(result){
+        console.log(result)
+    })
+    .then(function successValue1(){
+         console.log("You can call multiple functions this way")
+    })
 </script>
 
 <body>
