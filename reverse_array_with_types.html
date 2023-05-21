@@ -10,29 +10,44 @@
 <script>
     // Write a function that reverses an array of mixed types.
 
-    function reverseArray(arr) {
-        const reversing_array = arr.slice().reverse()
-        // this will print reverse of array not icluding types
-        console.log(reversing_array, "here 15")
+    // function reverseArray(arr) {
+    //     const reversing_array = arr.slice().reverse()
+    //     // this will print reverse of array not icluding types
+    //     console.log(reversing_array, "here 15")
 
-        //Apply loop till the length
-        for(var i=0;i<reversing_array.length;i++){
-            //This will check that If in my array their is any string they will also reverse
-            if(typeof reversing_array[i] === 'string'){
-                reversing_array[i] = reversing_array[i].split('').reverse().join('');
+    //     //Apply loop till the length
+    //     for(var i=0;i<reversing_array.length;i++){
+    //         //This will check that If in my array their is any string they will also reverse
+    //         if(typeof reversing_array[i] === 'string'){
+    //             reversing_array[i] = reversing_array[i].split('').reverse().join('');
+    //         }
+    //     }
+    //     return reversing_array
+    // }
+
+
+
+
+    // const array = ["udayveer singh", 1, 2, 3, 4, 5, 6, 7, "hello world"];
+
+    // const reversed_array = reverseArray(array)
+    // document.write(reversed_array)
+
+        function reverseArray(array){
+            const reversing_array = array.slice().reverse()
+            // console.log(reversing_array,"here38")
+
+            for(var i=0;i<reversing_array.length;i++){
+                if(typeof reversing_array[i] === 'string'){
+                    reversing_array[i] = reversing_array[i].split('').reverse().join('')
+                }
             }
+            return reversing_array;
         }
-        return reversing_array
-    }
 
-
-
-
-    const array = ["udayveer singh", 1, 2, 3, 4, 5, 6, 7, "hello world"];
-
-    const reversed_array = reverseArray(array)
-    document.write(reversed_array)
-
+        const arr = [1,4,6,3,7,"javascript","nodejs"]
+        const reversed_array = reverseArray(arr)
+        console.log(reversed_array)
 </script>
 
 <body>
