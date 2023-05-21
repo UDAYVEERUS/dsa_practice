@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.4.min.js"></script>
+    <title>jQuery</title>
+</head>
+<body>
+    <p>Select your gender</p>
+    <input type="radio" name="male" id="male">Male
+    <input type="radio" name="female" id="female">Female
+    <br>
+    <br>
+    <input type="button" value="Male" class="malebtn">
+    <input type="button" value="Female" class="femalebtn">
+    <input type="button" value="Reset" class="resetbtn">
+</body>
+<script>
+    $(document).ready(function(){
+        $(".malebtn").click(function(){
+            $("#male").prop("checked", true);
+            $("#female").prop("checked", false);
+        })
+        $(".femalebtn").click(function(){
+            $("#male").prop("checked", false);
+            $("#female").prop("checked", true);
+        })
+        $(".resetbtn").click(function(){
+            $("#male").prop("checked", false);
+            $("#female").prop("checked", false);
+        })
+    })
+</script>
+</html>
