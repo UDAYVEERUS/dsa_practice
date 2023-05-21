@@ -16,7 +16,20 @@ function findSecondLargest(arr){
 }
 //In this approach, we use the sort() method on the array with a comparison function that sorts the elements in descending order. After sorting, we can simply access the element at index 1 to get the second largest number in the array. However, please note that this method modifies the original array. If you need to preserve the original array, you can create a copy of it before sorting.
 
-    
+    // function findSecondLargest(arr){
+    //     let max = -Infinity
+    //     let secondLargest = -Infinity
+    //     for(var i=0;i<arr.length;i++){
+    //         if(arr[i] > max){
+    //             secondLargest = max
+    //             max = arr[i]
+    //         }
+    //         else if(arr[i]>secondLargest && arr[i]<max){
+    //             secondLargest = arr[i]
+    //         }
+    //     }
+    //     return secondLargest;
+    // }
 
 
     var array = [4,7,3,1,9,5,3,1]
