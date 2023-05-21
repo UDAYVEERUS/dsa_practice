@@ -13,9 +13,12 @@
 
     function reverseArray(arr) {
         const reversed_array = arr.slice().reverse()
-
+        // this will print reverse of array not icluding types
         console.log(reversed_array, "here 15")
+
+        //Apply loop till the length
         for(var i=0;i<reversed_array.length;i++){
+            //This will check that If in my array their is any string they will also reverse
             if(typeof reversed_array[i] === 'string'){
                 reversed_array[i] = reversed_array[i].split('').reverse().join('');
             }
