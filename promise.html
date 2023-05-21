@@ -6,42 +6,66 @@
     <title>Promises</title>
 </head>
 <script>
-    let x = 10;
+    // let x = 10;
 
-    const count = new Promise(function (resolve, reject) {
-        if (x == 10) {
-            resolve("promise fullfilled")
-        } else {
-            reject("promise rejected")
+    // const count = new Promise(function (resolve, reject) {
+    //     if (x == 10) {
+    //         resolve("promise fullfilled")
+    //     } else {
+    //         reject("promise rejected")
+    //     }
+    // })
+    // console.log(count)
+
+    // // return a promise
+    // let countValue = new Promise(function(resolve, reject){
+    //     resolve("promise fulfilled")
+    // })
+    // //Execute when promise fulfilled successfully
+    // countValue
+    // .then(function successValue(result){
+    //     console.log(result)
+    // })
+    // .then(function successValue1(){
+    //      console.log("You can call multiple functions this way")
+    // })
+
+    // //return a promise
+    // let counting  = new Promise(function(resolve , reject){
+    //     reject("promise rejected")
+    // })
+    // // executes when promise is resolved successfully
+    // counting.then(function(result){
+    //     console.log(result)
+    // })
+    // //Execute when is an error
+    // .catch(function errorValue(result){
+    //     console.log(result)
+    // })
+
+
+    // Promise function example
+        const fetchData = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(()=>{
+
+                    const data = 'Data fetched successfully'
+
+                    //resolve the promise with the data
+                    resolve(data);
+
+                    reject('Error Occurred')
+                    
+                },2000);
+            })
         }
-    })
-    console.log(count)
-
-    // return a promise
-    let countValue = new Promise(function(resolve, reject){
-        resolve("promise fulfilled")
-    })
-    //Execute when promise fulfilled successfully
-    countValue
-    .then(function successValue(result){
-        console.log(result)
-    })
-    .then(function successValue1(){
-         console.log("You can call multiple functions this way")
-    })
-
-    //return a promise
-    let counting  = new Promise(function(resolve , reject){
-        reject("promise rejected")
-    })
-    // executes when promise is resolved successfully
-    counting.then(function(result){
-        console.log(result)
-    })
-    //Execute when is an error
-    .catch(function errorValue(result){
-        console.log(result)
-    })
+        //using promise
+        fetchData().then((data)=>{
+            console.log("Success :",data)
+        })
+        .catch((error)=>{
+            console.log("Error", error)
+        })
 
 </script>
 
