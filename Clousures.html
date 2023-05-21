@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Closures</title>
+</head>
+<script>
+    // Closures are anonymous functions that have access to the variables of the outer function
+    function outerFunction(){
+        var outerVariable = "i'm from outer function"
+        function innerFunction(){
+            console.log(outerVariable);
+        }
+        return innerFunction;
+    }
+    const closure = outerFunction()
+    closure()
+</script>
+<body>
+    
+</body>
+</html>
