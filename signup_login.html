@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup & login Page</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Signup and Login Page</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f1f1f1;
+        }
+    
+        .container {
+          max-width: 400px;
+          margin: 100px auto;
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        h2 {
+          text-align: center;
+        }
+    
+        .form-group {
+          margin-bottom: 20px;
+        }
+    
+        .form-group label {
+          display: block;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+    
+        .form-group input {
+          width: 100%;
+          padding: 10px;
+          border-radius: 3px;
+          border: 1px solid #ccc;
+        }
+    
+        .form-group button {
+          width: 100%;
+          padding: 10px;
+          background-color: #4CAF50;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+          border-radius: 3px;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h2>Signup</h2>
+        <form id="signupForm">
+            
+          <div class="form-group">
+            <label for="signupUsername">Username</label>
+            <input type="text" id="signupUsername" required>
+          </div>
+          <div class="form-group">
+            <label for="signupUseremail">User Email</label>
+            <input type="email" id="signupUserEmail" required>
+        </div>
+          <div class="form-group">
+            <label for="signupPassword">Password</label>
+            <input type="password" id="signupPassword" required>
+          </div>
+          <div class="form-group">
+            <button type="submit">Signup</button>
+          </div>
+        </form>
+        <h2>Login</h2>
+        <form id="loginForm">
+          <!-- <div class="form-group">
+            <label for="loginUsername">Username</label>
+            <input type="text" id="loginUsername" required>
+          </div> -->
+          <div class="form-group">
+            <label for="loginUserEmail">User Email</label>
+            <input type="text" id="loginUserEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" required>
+          </div>
+          <div class="form-group">
+            <button type="submit">Login</button>
+          </div>
+        </form>
+      </div>
+    
+      <script>
+    //     const signupForm = document.getElementById('signupForm');
+    //     const loginForm = document.getElementById('loginForm');
+    
+    //     signupForm.addEventListener('submit', function(e) {
+    //       e.preventDefault();
+    
+    //       const username = document.getElementById('signupUsername').value;
+    //       const useremail = document.getElementById("signupUserEmail").value;
+    //       const password = document.getElementById('signupPassword').value;
+    
+    //       // Here you can perform additional checks and validation
+    //       // and handle the signup process accordingly
+    
+    //       console.log('Signup submitted');
+    //       console.log('Username:', username);
+    //       console.log('USerEMail',useremail);
+    //       console.log('Password:', password);
+    
+    //       // Reset the form
+    //       signupForm.reset();
+    //     });
+    
+    //     loginForm.addEventListener('submit', function(e) {
+    //       e.preventDefault();
+    
+    //       const username = document.getElementById('loginUsername').value;
+    //       const password = document.getElementById('loginPassword').value;
+    
+    //       // Here you can perform additional checks and validation
+    //       // and handle the login process accordingly
+    
+    //       console.log('Login submitted');
+    //       console.log('Username:', username);
+    //       console.log('Password:', password);
+    
+    //       // Reset the form
+    //       loginForm.reset();
+    //     });
+
+    const signupForm = document.getElementById("signupForm")
+    const loginForm = document.getElementById("loginForm")
+
+
+    signupForm.addEventListener('submit', function(e){
+        e.preventDefault();
+    
+
+    const user_name = document.getElementById("signupUsername").value;
+    const user_email = document.getElementById("signupUserEmail").value;
+    const user_password = document.getElementById("signupPassword").value;
+
+    console.log("signup Success")
+    console.log("User Details", user_name, user_email, user_password)
+
+    //Reset the form
+    signupForm.reset();
+})
+
+loginForm.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    const user_email = document.getElementById("loginUserEmail").value;
+    const user_password= document.getElementById("loginPassword").value;
+
+    console.log("login successfull")
+    console.log("UserEmail :",user_email, "UserPassword :", user_password )
+    
+    // Reset login form
+    loginForm.reset()
+})
+      </script>
+    </body>
+    </html>
+    
+</body>
+</html>
