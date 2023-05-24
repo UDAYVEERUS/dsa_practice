@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Fetch Api</title>
+</head>
+<script>
+    const fetchApi = async() => {
+        const url = "https://api.github.com/users"
+        const response = await fetch(url)
+        const response_json = await response.json()
+        console.log(response_json)
+    }
+    fetchApi()
+</script>
+<body>
+    
+</body>
+</html>
