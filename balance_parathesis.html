@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Balance Parenthesis</title>
+</head>
+<script>
+    function isBalancedParentheses(str) {
+  const stack = [];
+
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+
+    if (char === '(' || char === '[' || char === '{') {
+      stack.push(char);
+    } else if (char === ')' || char === ']' || char === '}') {
+      if (stack.length === 0) {
+        return false; // Closing parenthesis encountered without a corresponding opening parenthesis
+      }
+
+      const top = stack.pop();
+      if (
+        (char === ')' && top !== '(') ||
+        (char === ']' && top !== '[') ||
+        (char === '}' && top !== '{')
+      ) {
+        return false; // Mismatched opening and closing parentheses
+      }
+    }
+  }
+
+  return stack.length === 0; // Check if all opening parentheses have been closed
+}
+
+// Example usage:
+const str1 = "((()))"; // Balanced parentheses
+console.log(isBalancedParentheses(str1)); // Output: true
+
+// const str2 = "(()))"; // Unbalanced parentheses
+// console.log(isBalancedParentheses(str2)); // Output: false
+
+</script>
+<body>
+    
+</body>
+</html>
