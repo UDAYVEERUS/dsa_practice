@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Find second largest</title>
+</head>
+<script>
+    function findSecondLargest(arr){
+        let first = -1
+        let second = -1
+        for(var i=0;i<arr.length-1;i++){
+            if(arr[i] > first){
+                second = first
+                first = arr[i]
+            }
+            else if(arr[i] > second && arr[i]!==first){
+                second = arr[i]
+            }
+        }
+        return second;
+    }
+    const array = [22,33,54,12,43,64,21,15]
+    console.log(findSecondLargest(array))
+</script>
+<body>
+    
+</body>
+</html>
