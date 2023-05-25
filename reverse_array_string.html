@@ -22,6 +22,20 @@
     var string = "hello, world"
     const reverse_string = reverseString(string)
     document.write(reverse_string)
+    function reverseArray(str){
+    const reversing_array = str.slice('').reverse()
+    // return reversing_array
+    for(var i=0;i<reversing_array.length;i++){
+        if(typeof reversing_array[i] === 'string'){
+            reversing_array[i] = reversing_array[i].split('').reverse().join('')
+        }
+    }
+    return reversing_array
+}
+
+const string = ["udayveersingh","hellowordld", 1,4,6,3,7]
+console.log(reverseArray(string))
+
 
 </script>
 <body>
