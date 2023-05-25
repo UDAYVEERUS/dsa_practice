@@ -8,14 +8,18 @@
         let first = -1
         let second = -1
         for(var i=0;i<arr.length-1;i++){
+
+            // checking if arr[i] is greater than -1.
             if(arr[i] > first){
                 second = first
                 first = arr[i]
             }
+            // if arr[i] is greater than second and arr[i] is not equal to first.
             else if(arr[i] > second && arr[i]!==first){
                 second = arr[i]
             }
         }
+        // return second.
         return second;
     }
     const array = [22,33,54,12,43,64,21,15]
