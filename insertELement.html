@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Insert Element at specific index</title>
+</head>
+<script>
+    function insertelementIndex(arr, element, index){
+        arr.splice(index, 0 , element)
+        return arr
+    }
+
+    const arr  = [1,5,2,7,5]
+    const index = 2
+    const element = 10
+    const newArray  = insertelementIndex(arr, element, index)
+    console.log(newArray)
+</script>
+<body>
+    
+</body>
+</html>
