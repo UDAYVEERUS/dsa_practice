@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Rotate clockwise</title>
+</head>
+<script>
+    function rotateMatrix(matrix) {
+  const numRows = matrix.length;
+  const numCols = matrix[0].length;
+
+  // Create a new matrix with rotated dimensions
+  const rotatedMatrix = new Array(numCols);
+  for (let i = 0; i < numCols; i++) {
+    rotatedMatrix[i] = new Array(numRows);
+  }
+
+  // Perform the rotation
+  for (let row = 0; row < numRows; row++) {
+    for (let col = 0; col < numCols; col++) {
+      rotatedMatrix[col][numRows - 1 - row] = matrix[row][col];
+    }
+  }
+
+  return rotatedMatrix;
+}
+
+// Example usage:
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+
+const rotatedMatrix = rotateMatrix(matrix);
+console.log(rotatedMatrix);
+
+</script>
+<body>
+    
+</body>
+</html>
