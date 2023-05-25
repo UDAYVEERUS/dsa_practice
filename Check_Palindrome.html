@@ -5,19 +5,35 @@
     <title>Check Palindrome</title>
 </head>
 <script>
-    function isPalindrome(str){
-        var reverse = str.split('').reverse().join('')
-      if(str == reverse){
-        return "String is Palindrome"
-      }else{
-        return "String is Not Palindrome"
-      }
-    }
+    // function isPalindrome(str){
+    //     var reverse = str.split('').reverse().join('')
+    //   if(str == reverse){
+    //     return "String is Palindrome"
+    //   }else{
+    //     return "String is Not Palindrome"
+    //   }
+    // }
    
 
-    // const string1 = "indian"
-    const string2 = "racecar"
-    console.log(isPalindrome(string2))
+    // // const string1 = "indian"
+    // const string2 = "racecar"
+    // console.log(isPalindrome(string2))
+
+    function isPalindrome(str) {
+  // Remove non-alphanumeric characters and convert to lowercase
+  const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  
+  // Check if the cleaned string is equal to its reversed version
+  return cleanedStr === cleanedStr.split('').reverse().join('');
+}
+
+// Example usage
+// const string1 = 'racecar';
+// console.log(isPalindrome(string1));  // Output: true
+
+const string2 = 'Hello, world!';
+console.log(isPalindrome(string2));  // Output: false
+
 </script>
 
 <body>
