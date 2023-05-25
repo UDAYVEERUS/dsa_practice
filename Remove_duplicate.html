@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Remove Duplicate</title>
+</head>
+<script>
+    const array = [4,8,5,2,1,6,1,2,1,4,8]
+    for(var i=0;i<array.length;i++){
+        for(var j=i+1;j<array.length;j++){
+            if(array[i] === array[j]){
+                array.splice(j,1)
+                j--
+
+            }
+        }
+    }
+    console.log(array)
+    document.write(array)
+</script>
+<body>
+    
+</body>
+</html>
