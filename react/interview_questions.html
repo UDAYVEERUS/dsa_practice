@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React Interview Questions & Answers</title>
 </head>
+
 <body>
     <h1>What are closures?</h1>
     <p>A closures that have access of its outer function scope from the insider function</p>
@@ -14,28 +16,34 @@
     <p>A HOF is a function that takes one or more functions as argument or return a function as its result.</p>
 
     <h1>Difference between var , let and const?</h1>
-    <p>Var and let creates variables that can be reassign another value. but const creates a variable that can not be reassign the another value</p>
+    <p>Var and let creates variables that can be reassign another value. but const creates a variable that can not be
+        reassign the another value</p>
 
-    <h1>What is  Call , Apply and Bind?</h1>
-    <p>Call, apply and bind are the functions that helps you change the context value of the <b>this</b> keyword present inside the invoking function.</p>
+    <h1>What is Call , Apply and Bind?</h1>
+    <p>Call, apply and bind are the functions that helps you change the context value of the <b>this</b> keyword present
+        inside the invoking function.</p>
 
     <h1>Difference between map() and forEach() method</h1>
     <p>The Map() method returns a new array whereas forEach() method does not return a new array.</p>
-    <p>The Map() method is use to transform the elements of an array whereas the forEach() method is used to loop through the elements of an array.</p>
+    <p>The Map() method is use to transform the elements of an array whereas the forEach() method is used to loop
+        through the elements of an array.</p>
 
     <h1>What is Hoisting?</h1>
     <p>Hoisting is a javascript default behavior of moving all declaration to the top of the current scope.</p>
-    
+
     <h1>What are hooks?</h1>
-    <p>React hooks are simple javascript function that we can use isolate the reusable part from a functional components. Hooks can be stateful and manage the side-effects</p>
+    <p>React hooks are simple javascript function that we can use isolate the reusable part from a functional
+        components. Hooks can be stateful and manage the side-effects</p>
 
     <h1>What are useEffect and useRef hook?</h1>
     <p>useEffect : useEffect is use to manage the Side-Effect of the functional components.
-       useRef : useRef is a built in react hook that accepts one argument as the initial value and return a reference.
+        useRef : useRef is a built in react hook that accepts one argument as the initial value and return a reference.
     </p>
-    
+
     <h1>Difference between useEffect and useState hooks?</h1>
-    <p>useState is a hook that used to manage state in the functional components. , useEffect is used to manage the side Effects in the functional components( like fetching data , setting up event listeners or updating the dom in functional components)</p>
+    <p>useState is a hook that used to manage state in the functional components. , useEffect is used to manage the side
+        Effects in the functional components( like fetching data , setting up event listeners or updating the dom in
+        functional components)</p>
 
     <h1>What is rest operator?</h1>
     <p>THe rest operator is used to put the rest of some specific user-supplied values into the javascript array.</p>
@@ -47,24 +55,60 @@
     <p>A callback function which is to be executed after another function has finished execution.</p>
 
     <h1>What is JSX?</h1>
-    <p> JSX stands for javascript XML. JSX allows us to write html in the react.js . jsx make it easier to write add html in react.</p> 
+    <p> JSX stands for javascript XML. JSX allows us to write html in the react.js . jsx make it easier to write add
+        html in react.</p>
 
     <h1>Explain flow of redux?</h1>
     <p>Redux follows the unidirectional flow. that means your application will follow one way binding data flow.</p>
 
     <h1>Difference between Redux and Context API</h1>
-    <p>Redux : redux is a complete state manager capable of allowing an app to undo/redo actions and provides advanced developer tooling for debugging.</p>
-    <p>Context API is designed as a dependency injection mechanism that allows making data available through the component three without being manually passed.</p>
+    <p>Redux : redux is a complete state manager capable of allowing an app to undo/redo actions and provides advanced
+        developer tooling for debugging.</p>
+    <p>Context API is designed as a dependency injection mechanism that allows making data available through the
+        component three without being manually passed.</p>
 
     <h1>Explain Async/Await</h1>
-    <p>The async function declaration declares an async function where the await keyword is permitted within the function body.</p>
+    <p>The async function declaration declares an async function where the await keyword is permitted within the
+        function body.</p>
 
     <h1>Difference between state and props?</h1>
     <p>State is the local state of the components which can not be accessed and modified outside the components.</p>
-    <p>Prop's makes the components reusable by giving components the ability to receive data from their parent components in the form of props.</p>
+    <p>Prop's makes the components reusable by giving components the ability to receive data from their parent
+        components in the form of props.</p>
 
     <h1>What is MOUNTING and UNMOUNTING a component in react?</h1>
-    <p>MOUNTING : mounting is the process of outputting the virtual representation of a component into the final UI representation</p>
+    <p>MOUNTING : mounting is the process of outputting the virtual representation of a component into the final UI
+        representation</p>
     <p>UNMOUNTING : The next phase in the lifecycle is when a component is removed from the DOM</p>
+
+    <h1>Difference between localStorage or sessionStorage?</h1>
+    <p>localStorage : localStorage store the data with no expiration date.</p>
+    <p>sessionStorage : sessionStorage stores the data for one session. (Data is lost when the browser tab is closed)
+    </p>
+
+    <h1>What are the lifeCycle method in react.js</h1>
+    <p>Each component in react has a lifecycle method which you can monitor and manipulate during its three main phases
+        .the three phases are : MOUNTING , UPDATING AND UNMOUNTING. </p>
+
+    <h1>What is work of slice and splice?</h1>
+
+    <p>Slice returns a piece of the array but it does'nt affect the original array</p>
+
+    const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    const citrus = fruits.slice(1, 2);
+    console.log(citrus)
+    const fruites = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    const myBest = fruits.slice(-3, -1);
+    console.log(myBest)
+
+    <p>
+        Splice : splice mutates the array by removing and adding elements.
+        <script>
+            var arr = ["Monday", "Tuesday", "Thursday", "Friday"];
+            var result = arr.splice(2, 0, "Wednesday")
+            console.log(arr);  
+        </script>
+    </p>
 </body>
+
 </html>
