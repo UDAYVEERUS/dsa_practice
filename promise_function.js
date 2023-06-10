@@ -18,3 +18,15 @@ const getData = async() => {
     }
 }
 getData()
+
+// find factorial
+
+function factorialNum(n){
+    if(n<=1){
+        return 1
+    }
+    return n*factorialNum(n-1)
+}
+
+const num = 2;
+console.log(factorialNum(num))
