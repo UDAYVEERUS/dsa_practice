@@ -9,9 +9,12 @@ const fetchData = () => {
     })
 }
 
-fetchData().then((data)=>{
-    console.log("Success :" ,data)
-})
-.catch((error)=>{
-    console.log(error)
-})
+const getData = async() => {
+    try{
+        const result = await fetchData()
+        console.log("Success : ", result)
+    }catch(error){
+        console.log(error)
+    }
+}
+getData()
