@@ -20,3 +20,21 @@ const fetchData = async() => {
    
 }
 fetchData()
+
+
+// reversing array with its type
+const  reversingArray = (arr) =>{
+    
+    const reversingArray = arr.slice().reverse()
+
+    for(let i=0; i < reversingArray.length; i++){
+        if(typeof reversingArray[i] === "string"){
+            reversingArray[i] = reversingArray[i].split('').reverse().join('')
+            
+        }
+    }
+    return reversingArray
+}
+
+const array = [1,2,4,3,"hello", "udayveer"]
+console.log(reversingArray(array))
