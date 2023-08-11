@@ -9,3 +9,14 @@ let prom = new Promise(function(resolve, reject){
     }
 })
 console.log(prom)
+
+function promise(complete){
+    return new Promise((resolve, reject)=>{
+        if(complete){
+            resolve("I am success")
+        }else{
+            reject('some error ocurred')
+        }
+    })
+}
+console.log(promise(true))
