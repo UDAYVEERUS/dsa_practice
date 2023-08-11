@@ -5,10 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.hover-box {
+    width: 200px;
+    height: 200px;
+    background-color: #007bff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+</style>
 <body>
     <p id="text">Click the button to change this text.</p>
     <button id="button">Click me</button>
-
+    <div class="hover-box" id="box">Hover over me</div>
 </body>
 <script>
  const changeContent = document.getElementById("text")
@@ -16,6 +40,15 @@
 
  button.addEventListener("click", function(){
     changeContent.textContent = "thi is changedb kjbsdgkjnkj kjnsjkndkj nvx kjgwkkn kndw gkjkjsd  kkjnkjsndkjnfkjdk  fwkejfkjndkjnfkd kjnjkn"
+ })
+
+ const box = document.getElementById("box")
+
+ box.addEventListener("mouseover", function(){
+    box.style.backgroundColor = "red"
+ })
+ box.addEventListener("mouseleave",function(){
+    box.style.backgroundColor = "#007bff"
  })
 </script>
 </html>
