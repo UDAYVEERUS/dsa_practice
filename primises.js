@@ -19,4 +19,12 @@ function promise(complete){
         }
     })
 }
-console.log(promise(true))
+let onFullfillment = (result) => {
+    console.log(`result is`,  result)
+}
+let onReject = (error) => {
+    console.log(error)
+}
+
+promise(true).then(onFullfillment)
+promise(true).catch(onReject)
