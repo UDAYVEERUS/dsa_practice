@@ -28,12 +28,32 @@
         cursor: pointer;
         border-radius: 5px;
     }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
+
+    .hidden {
+        display: none;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        border-radius: 5px;
+    }
 </style>
 
 <body>
-    <p id="text">Click the button to change this text.</p>
-    <button id="button">Click me</button>
-    <div class="hover-box" id="box">Hover over me</div>
+    <div>
+        <p id="text">Click the button to change this text.</p>
+        <button id="button">Click me</button>
+        <div class="hover-box" id="box">Hover over me</div>
+    </div>
+
     <div>
         <form id="myForm">
             <label for="name">Name:</label>
@@ -44,6 +64,12 @@
             <br>
             <button type="submit">Submit</button>
         </form>
+    </div>
+    <div>
+        <button id="toggleButton">Toggle Content</button>
+        <div id="hiddenContent" class="hidden">
+            <p>This content is hidden by default.</p>
+        </div>
     </div>
 </body>
 <script>
@@ -65,7 +91,7 @@
 
     const myForm = document.getElementById("myForm")
 
-    myForm.addEventListener("submit", function(event){
+    myForm.addEventListener("submit", function (event) {
         event.preventDefault()
 
         const name = document.getElementById("name").value;
@@ -74,6 +100,18 @@
         localStorage.setItem("Email : ", email)
         alert(`Submitted : Name:${name}, Email: ${email}`)
     })
+
+    const toggleButton = document.getElementById("toggleButton")
+    const hiddenContent = document.getElementById("hiddenContent")
+
+        toggleButton.addEventListener("click" , function(){
+            if(hiddenContent.style.display === "none"){
+                hiddenContent.style.display = "block"
+            }else{
+                hiddenContent.style.display = "none"
+            }
+        })
+
 </script>
 
 </html>
