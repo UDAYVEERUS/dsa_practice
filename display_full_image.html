@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Intermediate Event Example</title>
+    <style>
+        .thumbnail {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .full-image {
+            max-width: 100%;
+            max-height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="gallery">
+        <img class="thumbnail"
+            src="https://media.gettyimages.com/id/1392876890/photo/2022-latin-american-music-awards-arrivals.jpg?s=612x612&w=gi&k=20&c=QDf4fIdIkC4Owtks9JCO65sJ_PwDXf4y4O-tYi6TQ40="
+            alt="Thumbnail 1">
+        <img class="thumbnail" src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510_1280.jpg"
+            alt="Thumbnail 2">
+        <img class="thumbnail"
+            src="https://imgd.aeplcdn.com/1056x594/n/cw/ec/44686/activa-6g-right-front-three-quarter.jpeg?q=75&q=75"
+            alt="Thumbnail 3">
+    </div>
+    <div id="fullImageContainer">
+        <img id="fullImage" class="full-image" src="" alt="Full Image">
+    </div>
+
+    <script>
+        var thumbnails = document.querySelectorAll(".thumbnail");
+        var fullImage = document.getElementById("fullImage");
+
+        // Intermediate event function to display the full image
+        function displayFullImage(event) {
+            var thumbnailSrc = event.target.getAttribute("src");
+            fullImage.setAttribute("src", thumbnailSrc);
+            fullImageContainer.style.display = "block";
+        }
+
+        // Attach the intermediate event function to each thumbnail image
+        thumbnails.forEach(function (thumbnail) {
+            thumbnail.addEventListener("click", displayFullImage);
+        });
+
+        // Close the full image when clicked
+        fullImage.addEventListener("click", function () {
+            fullImageContainer.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>
