@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="registrationForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <span id="usernameError" style="color: red;"></span>
+        <br>
+        <label for="useremail">UserEmail:</label>
+        <input type="text" id="useremail" required>
+        <span id="useremailerror" style="color: red;"></span>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <span id="passwordError" style="color: red;"></span>
+    </form>
+    <script>
+        const userNameInput = document.getElementById("username")
+        const userEmailInput = document.getElementById("useremail")
+        const passwordInput = document.getElementById("password")
+        const userNameError = document.getElementById("usernameError")
+        const userEmailError = document.getElementById("useremailerror")
+        const passwordError = document.getElementById("passwordError")
+
+        function validateUserName(){
+            userNameError.textContent = ""
+            if(userNameInput.value.length<5){
+                userNameError.textContent = "User name must be at-least 5 character"
+            }
+        }
+        function validateUserEmail(){
+            userEmailError.textContent = ""
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if(!emailPattern.test(userEmailInput.value)){
+                userEmailError.textContent = "Invalid Email format."
+            }
+            
+        }
+        function validatePassword(){
+            passwordError.textContent = ""
+            if(passwordInput.length <8){
+                passwordError.textContent = "password must be at least 8 characters."
+            }
+           
+        }
+        userNameInput.addEventListener("input",validateUserName)
+        userEmailInput.addEventListener("input",validateUserEmail)
+        passwordInput.addEventListener("input", validatePassword)
+
+    </script>
+</body>
+</html>
