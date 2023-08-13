@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simple Drawing App</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+
+    canvas {
+        border: 1px solid #000;
+    }
+</style>
+
+<body>
+    <canvas id="drawingCanvas"></canvas>
+</body>
+<script>
+    const canvas = document.getElementById('drawingCanvas');
+    const context = canvas.getContext('2d');
+    let isDrawing = false;
+
+    // Set canvas size
+    canvas.width = window.innerWidth * 0.7;
+    canvas.height = window.innerHeight * 0.7;
+
+    // Event handler function for drawing
+    function handleDrawing(event) {
+        if (!isDrawing) return;
+
+        context.lineWidth = 5;
+        context.lineCap = 'round';
+        context.strokeStyle = 'black';
+
+        context.lineTo(event.clientX, event.clientY);
+        context.stroke();
+        context.beginPath();
+        context.moveTo(event.clientX, event.clientY);
+    }
+
+    // Start drawing when the mouse button is pressed
+    canvas.addEventListener('mousedown', (event) => {
+        isDrawing = true;
+        context.beginPath();
+        context.moveTo(event.clientX, event.clientY);
+    });
+
+    // Stop drawing when the mouse button is released
+    canvas.addEventListener('mouseup', () => {
+        isDrawing = false;
+        context.beginPath();
+    });
+
+    // Continue drawing when the mouse is moved
+    canvas.addEventListener('mousemove', handleDrawing);
+
+    // Disable context menu on canvas
+    canvas.addEventListener('contextmenu', (event) => {
+        event.preventDefault();
+    });
+
+</script>
+
+</html>
