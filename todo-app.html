@@ -73,7 +73,6 @@
                 taskInput.value = '';
             }
         }
-
         // Event handler function to remove a task
         function removeTask(event) {
             if (event.target.classList.contains('delete-button')) {
@@ -81,7 +80,6 @@
                 taskList.removeChild(taskItem);
             }
         }
-
         // Attach event handlers
         addButton.addEventListener('click', addTask);
         taskList.addEventListener('click', removeTask);
